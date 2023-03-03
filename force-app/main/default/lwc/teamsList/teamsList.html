@@ -1,0 +1,29 @@
+<template>
+    <template if:true = {isLoading}>
+        <lightning-spinner alternative-text="Loading" size="xx-small"></lightning-spinner>
+    </template>
+    <template if:false = {isLoading}>
+        <lightning-card>
+        
+            <lightning-combobox label="Select Team" value={value} placeholder="Select Team" options={getOptions} onchange={selectteam} required variant="label-inline"></lightning-combobox>
+            <lightning-button label="Delete" onclick={handleDelete}></lightning-button>
+            <template if:true = {isMemberData}>
+               
+                <lightning-datatable key-field="Id" data={memberdata} columns={columns} 
+                onrowaction={handleRowAction} onsave={handleSave} draft-values={draftValues} show-row-number-column>
+             </lightning-datatable>
+                <c-pagination ondatashow={datashow}></c-pagination>
+                <c-modal-demo-in-l-w-c ondatarefresh={datarefresh}></c-modal-demo-in-l-w-c>
+            </template>
+            <template for:each={memberdata} for:item="listVariable">
+               <c-hoverpropertyparent key={listVariable.Id} record={listVariable} ondatarefresh={datarefresh}></c-hoverpropertyparent>
+            </template>
+
+            <template if:false = {isMemberData}>
+                <p>No Record are found</p>
+            </template>
+        </lightning-card>
+
+    </template>
+    
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="xx-small"></lightning-spinner>
+    </template>
+    <template if:false={isLoading}>
+    <div class="slds-p-around_medium lgc-bg " >
+        <lightning-input type="text" label="Name" onchange={configurationChangeVal} variant="label-inline"></lightning-input>
+        <lightning-combobox label="Team"  placeholder="Select Team" options={getOptions} onchange={configurationChangeVal} required variant="label-inline"></lightning-combobox>
+        <lightning-input type="text" label="Skill" onchange={configurationChangeVal} variant="label-inline"></lightning-input>
+        <lightning-button variant="brand" label="Submit" title="Create New Record" onclick={handleClick}></lightning-button>
+    </div>
+    </template>
+</template>

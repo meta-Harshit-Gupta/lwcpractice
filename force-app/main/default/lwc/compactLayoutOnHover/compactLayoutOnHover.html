@@ -1,0 +1,19 @@
+
+
+<template>
+      <div style="position: absolute; opacity: 1" class="ModelTooltip">
+          <section class="slds-popover slds-popover_panel slds-nubbin_top-left" role="dialog">
+            <div class="slds-popover__header">
+              <header class="slds-media slds-media_center slds-m-bottom_small">
+                <div class="slds-media__body">
+                  <h2 class="slds-text-heading_medium slds-hyphenate">Account Details</h2>
+                </div>
+              </header>
+            </div>
+            <div class="slds-popover__body">
+                <lightning-record-form record-id={recordId} object-api-name="Team_Member__c"  fields={fields} columns="1" mode="edit" onsuccess={handleSuccess}> </lightning-record-form>
+            </div>
+          </section>
+        </div>
+      
+</template>
