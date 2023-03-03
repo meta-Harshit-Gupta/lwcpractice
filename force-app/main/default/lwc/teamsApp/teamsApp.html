@@ -1,0 +1,9 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="xx-small"></lightning-spinner>
+    </template>
+    <template if:false={isLoading}>
+        <c-member-skills teamsdetail={teamsdetail}></c-member-skills>
+        <c-teams-list teamsdetail={teamsdetail}></c-teams-list>
+    </template>
+</template>

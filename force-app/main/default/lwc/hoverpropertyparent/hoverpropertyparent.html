@@ -1,0 +1,19 @@
+
+<template>
+    <lightning-record-view-form
+    key={record.Id}
+    record-id={record.Id}
+    object-api-name="Team_Member__c">
+    <div class="slds-box" onmouseout={handleMouseout} onmouseover={handleMouseover} >
+        <!-- Tooltip-->
+    <lightning-output-field field-name={name}> </lightning-output-field>
+    <div style="display:none;position: absolute;opacity:0" class="ModelTooltip">
+        <c-compact-layout-on-hover record-id={record.Id} ondatarefresh={datarefresh}></c-compact-layout-on-hover>
+    </div>
+    <lightning-output-field field-name={skill}> </lightning-output-field>
+    <lightning-output-field field-name={team}> </lightning-output-field>
+
+    </div>
+    </lightning-record-view-form>
+    
+</template>

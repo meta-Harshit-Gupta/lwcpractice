@@ -1,0 +1,17 @@
+<template>
+    <lightning-layout> 
+        <lightning-layout-item>
+            <lightning-button label="First" disabled={isFirst} onclick={handleFirst} variant="brand" icon-name="utility:back" name="First"></lightning-button>
+            <lightning-button label="Prev" disabled={isPrev} onclick={handlePrev} variant="brand" icon-name="utility:back" name="prev"></lightning-button>  
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow"></lightning-layout-item>
+        <lightning-layout-item>
+            {startingRecord} - {endingRecord} of {totalRecountCount} | Page {currentPage} of {totalPage} |
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow"></lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button label="Next" disabled={isNext} onclick={handleNext} variant="brand" icon-name="utility:forward" icon-position="right" name="next"></lightning-button>
+            <lightning-button label="End" disabled={isEnd} onclick={handleEnd} variant="brand" icon-name="utility:forward" icon-position="right" name="End"></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout> 
+</template>

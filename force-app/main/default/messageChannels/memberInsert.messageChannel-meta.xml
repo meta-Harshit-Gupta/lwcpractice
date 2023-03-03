@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Message Channel to pass the selected sidebar</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is Id of team record</description>
+        <fieldName>teamId</fieldName>
+    </lightningMessageFields>
+    <masterLabel>Member Insert Message Channel</masterLabel>
+</LightningMessageChannel>
